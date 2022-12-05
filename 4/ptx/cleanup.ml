@@ -21,7 +21,8 @@ let to_int_list s =
     end s []
 
 let compose_digits l =
-    List.fold_right2 (fun a b sum -> a * b + sum) l (dec_list (List.length l)) 0
+    List.fold_right2 (fun a b sum -> a * b + sum) l
+    (dec_list (List.length l)) 0
 
 let to_int s = s |> to_int_list |> compose_digits
 
